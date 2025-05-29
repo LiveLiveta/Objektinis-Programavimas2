@@ -27,4 +27,22 @@ class Studentas : public Zmogus{
         void prisistatymas() override;
         void vidurkio_skaiciavimas();
         void medianos_skaiciavimas();
+
+        bool operator==(const Studentas &studentas) const{
+            return vardas == studentas.vardas &&
+                    pavarde == studentas.pavarde &&
+                    pazymiai == studentas.pazymiai &&
+                    egzamino_pazymys == studentas.egzamino_pazymys &&
+                    vidurkis == studentas.vidurkis &&
+                    mediana == studentas.mediana;
+        }
+
+        bool operator!=(const Studentas &studentas) const{
+            return vardas != studentas.vardas &&
+                    pavarde != studentas.pavarde &&
+                    pazymiai != studentas.pazymiai &&
+                    egzamino_pazymys != studentas.egzamino_pazymys &&
+                    vidurkis != studentas.vidurkis &&
+                    mediana != studentas.mediana; 
+        }
 };

@@ -61,6 +61,7 @@ TEST_CASE("Studentas move konstruktorius perkelia duomenis") {
     REQUIRE(s2.pavarde == "Onyte");
     REQUIRE(s2.egzamino_pazymys == 10);
     REQUIRE(s2.pazymiai == vector<int>{9, 10, 7, 6});
+    REQUIRE_FALSE(s1 == s2);
 }
 
 TEST_CASE("Studentas move assignment perkelia duomenis") {
@@ -77,6 +78,7 @@ TEST_CASE("Studentas move assignment perkelia duomenis") {
     REQUIRE(s2.pavarde == "Onyte");
     REQUIRE(s2.egzamino_pazymys == 10);
     REQUIRE(s2.pazymiai == vector<int>{9, 10, 7, 6});
+    REQUIRE_FALSE(s1 == s2);
 }
 
 TEST_CASE("Studentas destructor doesn't crash") {
